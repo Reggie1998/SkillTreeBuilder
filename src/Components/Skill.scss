@@ -1,0 +1,46 @@
+.skill { //Default vars
+    --border-color: rgb(0, 119, 255);
+    --left: 100px;
+    --top: 100px;
+}
+.skill {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 88px;
+    position: absolute;
+    left: var(--left);
+    color: #ffff;
+    top: var(--top);
+    width: 88px;
+    border-radius: 50%;
+    border: 3px solid var(--border-color);
+    background: radial-gradient(circle at 65% 15%, white 1px, rgb(82, 205, 0) 3%, rgb(0, 62, 11) 60%, rgb(82, 205, 0) 100%);
+
+
+    .centered {
+        position: absolute;
+    }
+    
+    .hover-description {
+       display: none;
+       width: 200px;
+       height: 100px;
+       background-color: #3E2C41; 
+    }
+}
+
+.skill:hover {
+    .hover-description {
+        left: 94px;
+        border: 2px solid #261C2C;
+        display: block;
+        position: absolute;
+    }
+}
+
+.skill:active {
+    cursor: grabbing;
+}
+
