@@ -43,6 +43,7 @@ const MainPage = (props: MainPageProps) => {
         }}>
         Add Skill
       </button>
+      <button onClick={() => console.log()}>Json</button>
       ALT + LEFT CLICK TO ADD CONNECTION
       <Xwrapper>
         {skillState.skills.map((obj: ISkill) => (

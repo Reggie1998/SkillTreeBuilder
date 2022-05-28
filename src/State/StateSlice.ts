@@ -126,6 +126,15 @@ export const stateSlice = createSlice({
       }
     },
     //Change stats todo
+
+    //
+    // updates state according to passed in json
+    // perhaps check if a better way exists
+    importState: (state, action) => {
+      state.latestReleaseLocation = action.payload.latestReleaseLocation;
+      state.selectedSkillId = action.payload.selectedSkillId;
+      state.skills = action.payload.skills;
+    },
   },
 });
 
@@ -138,6 +147,7 @@ export const {
   removeConnection,
   changeDescription,
   changeName,
+  importState,
 } = stateSlice.actions;
 
 export const state = (state: any) => state.state;

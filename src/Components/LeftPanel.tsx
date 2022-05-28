@@ -12,6 +12,7 @@ import {
   removeConnection,
   changeName,
   changeDescription,
+  importState,
 } from "../State/StateSlice";
 
 interface LeftPanelProps {}
@@ -60,6 +61,9 @@ const LeftPanel = (props: LeftPanelProps) => {
         }}>
         Update skill
       </button>
+      <button onClick={() => navigator.clipboard.writeText(JSON.stringify(skillState))}>clipboard current JSON</button>
+      <textarea style={{ width: "200px", height: "200px", maxHeight: "250px" }}></textarea>
+      <button onClick={() => navigator.clipboard.readText().then((result) => dispatch(importState(JSON.parse(result))))}>Import state</button>
     </div>
   );
 };
